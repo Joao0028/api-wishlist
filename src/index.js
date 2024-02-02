@@ -1,8 +1,10 @@
 const express = require("express");
 const axios = require("axios");
 const mongoose = require("mongoose");
+const cors = require("cors")
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 const porta = 3001;
 
