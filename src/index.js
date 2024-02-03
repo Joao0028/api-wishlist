@@ -12,7 +12,8 @@ const Produto = mongoose.model("Produto", {
     nomeProduto: String,
     id: String,
     imagem: String,
-    favoritado: Boolean
+    favoritado: Boolean,
+    tipo: String
 });
 
 // Rota GET para obter os dados do MongoDB
@@ -32,12 +33,12 @@ app.get("/", async (req, res) => {
 app.put('/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const { nomeProduto, imagem, favoritado } = req.body;
+        const { nomeProduto, imagem, favoritado, tipo } = req.body;
 
         // Encontrar o produto pelo ID e atualizar os campos desejados
         const produtoAtualizado = await Produto.findByIdAndUpdate(
             id,
-            { nomeProduto, imagem, favoritado },
+            { nomeProduto, imagem, favoritado, tipo },
             { new: true } // Retorna o documento atualizado
         );
 
@@ -62,7 +63,8 @@ app.post("/", async (req, res) => {
             nomeProduto: produto.name,
             id: produto.product.details.sku,
             imagem: produto.product.image,
-            favoritado: false
+            favoritado: false,
+            tipo: produto.productType.name
         }));
 
         // Salvar os dados no MongoDB
