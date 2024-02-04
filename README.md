@@ -12,7 +12,7 @@ O projeto já está com o visual pronto, e seguindo o modelo passado. Porém ain
 - Sass
 - Jest e React Testing Library
 
-### Como rodar este projeto
+### Como rodar separadamente
 
 ```
 # Clone o Repositório
@@ -30,7 +30,7 @@ npm run start-both
 ```
 
 ### Importante!
-Caso queira iniciar com npm run dev, é necessário iniciar a <a href="https://github.com/Joao0028/api-wishlist" target="_blank">API feita em Nodejs</a> no http://localhost:3001/, juntamente com está aplicação.
+Caso queira iniciar com npm run dev, é necessário iniciar a <a href="https://github.com/Joao0028/wishlist" target="_blank">API feita em Nodejs</a> no http://localhost:3001/, juntamente com está aplicação.
 
 <div align="center">
   <sub>Desafio Front end Luiza Labs. Desenvolvedor :
